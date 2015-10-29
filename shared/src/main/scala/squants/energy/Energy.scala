@@ -73,11 +73,61 @@ final class Energy private (val value: Double, val unit: EnergyUnit)
   def toMMBtus = to(MMBtus)
   def toErgs = to(Ergs)
   def toTherms = to(Therms)
-  def toNGcfs = to(NGcfs)
-  def toNGCcfs = to(NGCcfs)
-  def toNGKcfs = to(NGKcfs)
-  def toNGMcfs = to(NGMcfs)
+  def toNGCfs = to(NGCfs)
+  def toNGCCfs = to(NGCCfs)
+  def toNGKCfs = to(NGKCfs)
+  def toNGMCfs = to(NGMCfs)
   def toNGm3s = to(NGm3s)
+
+  def toOilNo1USGs = to(OilNo1USGs)
+  def toOilNo1UKGs = to(OilNo1UKGs)
+  def toOilNo1Ls = to(OilNo1Ls)
+
+  def toOilNo2USGs = to(OilNo2USGs)
+  def toOilNo2UKGs = to(OilNo2UKGs)
+  def toOilNo2Ls = to(OilNo2Ls)
+
+  def toOilNo4USGs = to(OilNo4USGs)
+  def toOilNo4UKGs = to(OilNo4UKGs)
+  def toOilNo4Ls = to(OilNo4Ls)
+
+  def toOilNo6USGs = to(OilNo6USGs)
+  def toOilNo6UKGs = to(OilNo6UKGs)
+  def toOilNo6Ls = to(OilNo6Ls)
+
+  def toDieselUSGs = to(DieselUSGs)
+  def toDieselUKGs = to(DieselUKGs)
+  def toDieselLs = to(DieselLs)
+
+  def toKeroseneUSGs = to(KeroseneUSGs)
+  def toKeroseneUKGs = to(KeroseneUKGs)
+  def toKeroseneLs = to(KeroseneLs)
+
+  def toPropaneUSGs = to(PropaneUSGs)
+  def toPropaneUKGs = to(PropaneUKGs)
+  def toPropaneLs = to(PropaneLs)
+  def toPropaneCfs = to(PropaneCfs)
+  def toPropaneCCfs = to(PropaneCCfs)
+  def toPropaneLKCs = to(PropaneKCfs)
+
+  def toSteamLbs = to(SteamLbs)
+
+  def toCHWTonHs = to(CHWTonHs)
+
+  def toCoalATons = to(CoalATons)
+  def toCoalALbs = to(CoalALbs)
+  def toCoalATonnes = to(CoalATonnes)
+
+  def toCoalBitTons = to(CoalBitTons)
+  def toCoalBitLbs = to(CoalBitLbs)
+  def toCoalBitTonnes = to(CoalBitTonnes)
+
+  def toCokeTons = to(CokeTons)
+  def toCokeLbs = to(CokeLbs)
+  def toCokeTonnes = to(CokeTonnes)
+
+  def toWoodTones = to(WoodTons)
+  def toWoodTonnes = to(WoodTonnes)
 }
 
 /**
@@ -94,7 +144,15 @@ object Energy extends Dimension[Energy] {
   def units = Set(WattHours, KilowattHours, MegawattHours, GigawattHours,
     Joules, Picojoules, Nanojoules, Microjoules, Millijoules,
     Kilojoules, Megajoules, Gigajoules, Terajoules,
-    BritishThermalUnits, KBtus, MBtus, MMBtus, Ergs, Therms, NGcfs, NGCcfs, NGKcfs, NGMcfs, NGm3s)
+    BritishThermalUnits, KBtus, MBtus, MMBtus, Ergs, Therms, NGCfs,
+    NGCCfs, NGKCfs, NGMCfs, NGm3s, OilNo1USGs, OilNo1UKGs, OilNo1Ls,
+    OilNo2USGs, OilNo2UKGs, OilNo2Ls, OilNo4USGs, OilNo4UKGs, OilNo4Ls,
+    OilNo6USGs, OilNo6UKGs, OilNo6Ls, DieselUSGs, DieselUKGs, DieselLs,
+    PropaneUSGs, PropaneUKGs, PropaneLs,PropaneCfs, PropaneCCfs, PropaneKCfs,
+    KeroseneUSGs, KeroseneUKGs, KeroseneLs, SteamLbs, SteamKLbs, SteamMLbs,
+    CHWTonHs, CoalATons,CoalATonnes, CoalALbs, CoalAKLbs, CoalAMLbs,
+    CoalBitTons, CoalBitTonnes, CoalBitLbs, CoalBitKLbs, CoalBitMLbs,
+    CokeTons, CokeLbs, CokeKLbs, CokeMLbs, CokeTonnes, WoodTons, WoodTonnes)
 }
 
 /**
@@ -199,23 +257,23 @@ object Therms extends EnergyUnit {
   val symbol = "therms"
 }
 
-object NGcfs extends EnergyUnit {
-  val conversionFactor = EnergyConversions.NGcfMultiplier
+object NGCfs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.NGCfMultiplier
   val symbol = "NGcf"
 }
 
-object NGCcfs extends EnergyUnit {
-  val conversionFactor = EnergyConversions.NGcfMultiplier * MetricSystem.Centi
+object NGCCfs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.NGCfMultiplier * MetricSystem.Centi
   val symbol = "NGCcf"
 }
 
-object NGKcfs extends EnergyUnit {
-  val conversionFactor = EnergyConversions.NGcfMultiplier * MetricSystem.Kilo
+object NGKCfs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.NGCfMultiplier * MetricSystem.Kilo
   val symbol = "NGKcf"
 }
 
-object NGMcfs extends EnergyUnit {
-  val conversionFactor = EnergyConversions.NGcfMultiplier * MetricSystem.Mega
+object NGMCfs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.NGCfMultiplier * MetricSystem.Mega
   val symbol = "NGMcf"
 }
 
@@ -223,6 +281,222 @@ object NGm3s extends EnergyUnit {
   val conversionFactor = EnergyConversions.NGm3Multiplier
   val symbol = "NGm3"
 }
+
+object OilNo1USGs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.No1USGMultiplier
+  val symbol = "No1USG"
+}
+object OilNo1UKGs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.No1UKGMultiplier
+  val symbol = "No1UKG"
+}
+object OilNo1Ls extends EnergyUnit {
+  val conversionFactor = EnergyConversions.No1LMultiplier
+  val symbol = "No1L"
+}
+
+object OilNo2USGs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.No2USGMultiplier
+  val symbol = "No2USG"
+}
+object OilNo2UKGs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.No2UKGMultiplier
+  val symbol = "No2UKG"
+}
+object OilNo2Ls extends EnergyUnit {
+  val conversionFactor = EnergyConversions.No2LMultiplier
+  val symbol = "No2L"
+}
+
+object OilNo4USGs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.No4USGMultiplier
+  val symbol = "No4USG"
+}
+object OilNo4UKGs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.No4UKGMultiplier
+  val symbol = "No4UKG"
+}
+object OilNo4Ls extends EnergyUnit {
+  val conversionFactor = EnergyConversions.No4LMultiplier
+  val symbol = "No4L"
+}
+
+object OilNo6USGs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.No6USGMultiplier
+  val symbol = "No6USG"
+}
+object OilNo6UKGs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.No6UKGMultiplier
+  val symbol = "No6UKG"
+}
+object OilNo6Ls extends EnergyUnit {
+  val conversionFactor = EnergyConversions.No6LMultiplier
+  val symbol = "No6L"
+}
+
+object DieselUSGs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.DieselUSGMultiplier
+  val symbol = "DieselUSG"
+}
+object DieselUKGs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.DieselUKGMultiplier
+  val symbol = "DieselUKG"
+}
+object DieselLs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.DieselLMultiplier
+  val symbol = "DieselL"
+}
+
+
+object KeroseneUSGs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.KeroseneUSGMultiplier
+  val symbol = "KeroseneUSG"
+}
+object KeroseneUKGs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.KeroseneUKGMultiplier
+  val symbol = "KeroseneUKG"
+}
+object KeroseneLs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.KeroseneLMultiplier
+  val symbol = "KeroseneL"
+}
+
+
+object PropaneUSGs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.PropaneUSGMultiplier
+  val symbol = "PropaneUSG"
+}
+object PropaneUKGs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.PropaneUKGMultiplier
+  val symbol = "PropaneUKG"
+}
+object PropaneLs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.PropaneLMultiplier
+  val symbol = "PropaneL"
+}
+
+object PropaneCfs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.PropaneCfMultiplier
+  val symbol = "PropaneCf"
+}
+object PropaneCCfs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.PropaneCfMultiplier * MetricSystem.Centi
+  val symbol = "PropaneCCf"
+}
+object PropaneKCfs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.PropaneCfMultiplier * MetricSystem.Kilo
+  val symbol = "PropaneKCf"
+}
+
+object SteamLbs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.SteamLbMultiplier
+  val symbol = "SteamLb"
+}
+
+object SteamKLbs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.SteamLbMultiplier * MetricSystem.Kilo
+  val symbol = "SteamKLb"
+}
+
+object SteamMLbs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.SteamLbMultiplier * MetricSystem.Mega
+  val symbol = "SteamMlb"
+}
+
+object CHWTonHs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.CHWTonHMultiplier
+  val symbol = "CHWTonH"
+}
+
+object CoalATons extends EnergyUnit {
+  val conversionFactor = EnergyConversions.CoalATonMultiplier
+  val symbol = "CoalATon"
+}
+
+object CoalALbs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.CoalALbMultiplier
+  val symbol = "CoalALb"
+}
+
+object CoalAKLbs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.CoalALbMultiplier * MetricSystem.Kilo
+  val symbol = "CoalAKLb"
+}
+
+object CoalAMLbs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.CoalALbMultiplier * MetricSystem.Mega
+  val symbol = "CoalAMLb"
+}
+
+object CoalATonnes extends EnergyUnit {
+  val conversionFactor = EnergyConversions.CoalATonneMultiplier
+  val symbol = "CoalATonne"
+}
+
+
+object CoalBitTons extends EnergyUnit {
+  val conversionFactor = EnergyConversions.CoalBitTonMultiplier
+  val symbol = "CoalBitTon"
+}
+
+object CoalBitLbs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.CoalBitLbMultiplier
+  val symbol = "CoalBitLb"
+}
+
+object CoalBitKLbs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.CoalBitLbMultiplier * MetricSystem.Kilo
+  val symbol = "CoalBitKLb"
+}
+
+object CoalBitMLbs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.CoalBitLbMultiplier * MetricSystem.Mega
+  val symbol = "CoalBitMLb"
+}
+
+object CoalBitTonnes extends EnergyUnit {
+  val conversionFactor = EnergyConversions.CoalBitTonneMultiplier
+  val symbol = "CoalBitTonne"
+}
+
+object CokeTons extends EnergyUnit {
+  val conversionFactor = EnergyConversions.CokeTonMultiplier
+  val symbol = "CokeTon"
+}
+
+object CokeLbs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.CokeLbMultiplier
+  val symbol = "CokeLb"
+}
+
+object CokeKLbs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.CokeLbMultiplier * MetricSystem.Kilo
+  val symbol = "CokeKLb"
+}
+
+object CokeMLbs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.CokeLbMultiplier * MetricSystem.Mega
+  val symbol = "CokeMLb"
+}
+
+object CokeTonnes extends EnergyUnit {
+  val conversionFactor = EnergyConversions.CokeTonneMultiplier
+  val symbol = "CokeTonne"
+}
+
+object WoodTons extends EnergyUnit {
+  val conversionFactor = EnergyConversions.WoodTonMultiplier
+  val symbol = "WoodTon"
+}
+
+object WoodTonnes extends EnergyUnit {
+  val conversionFactor = EnergyConversions.WoodTonneMultiplier
+  val symbol = "WoodTonne"
+}
+
+
+
+
 
 object EnergyConversions {
   lazy val wattHour = WattHours(1)
@@ -248,8 +522,52 @@ object EnergyConversions {
   lazy val btuMultiplier = 2.930710701722222e-1
 
   lazy val thermMultiplier = 29300.1
-  lazy val NGcfMultiplier = 0.3006909
+  lazy val NGCfMultiplier = 0.3006909
   lazy val NGm3Multiplier = 10639.359
+
+  lazy val No1USGMultiplier = 40.7368788e-3
+  lazy val No1UKGMultiplier = 48.9214745e-3
+  lazy val No1LMultiplier = 10.76157e-3
+
+  lazy val No2USGMultiplier = 40.4438077e-3
+  lazy val No2UKGMultiplier = 48.5694962e-3
+  lazy val No2LMultiplier = 10.684199e-3
+
+  lazy val No4USGMultiplier = 42.7883762e-3
+  lazy val No4UKGMultiplier = 51.3850299e-3
+  lazy val No4LMultiplier = 11.303458e-3
+
+  lazy val No6USGMultiplier = 43.9606605e-3
+  lazy val No6UKGMultiplier = 52.7929434e-3
+  lazy val No6LMultiplier = 11.613234e-3
+
+  lazy val DieselUSGMultiplier = 40.4438077e-3
+  lazy val DieselUKGMultiplier = 48.5694962e-3
+  lazy val DieselLMultiplier = 10.684199e-3
+
+  lazy val KeroseneUSGMultiplier = 39.5645945e-3
+  lazy val KeroseneUKGMultiplier = 47.5135611e-3
+  lazy val KeroseneLMultiplier = 10.451794e-3
+
+  lazy val PropaneUSGMultiplier = 26.962538e-3
+  lazy val PropaneUKGMultiplier = 32.3796641e-3
+  lazy val PropaneLMultiplier = 7.1227993e-3
+  lazy val PropaneCfMultiplier = .7373668e-3
+
+  lazy val SteamLbMultiplier = .3499269e-3
+  lazy val CHWTonHMultiplier = 3.5168528e-3
+  lazy val CoalATonMultiplier = 7353.1531506-3
+  lazy val CoalATonneMultiplier = 8105.8636991e-3
+  lazy val CoalALbMultiplier = 3.6765766-3
+  lazy val CoalBitTonMultiplier = 7306.2617794e-3
+  lazy val CoalBitTonneMultiplier = 8054.1791505e-3
+  lazy val CoalBitLbMultiplier = 3.6531309e-3
+  lazy val CokeTonMultiplier = 7268.1625403e-3
+  lazy val CokeTonneMultiplier = 8012.2699874e-3
+  lazy val CokeLbMultiplier = 3.6340813e-3
+  lazy val WoodTonMultiplier = 5122.8823066e-3
+  lazy val WoodTonneMultiplier = 4647.2279597e-3
+
 
   implicit class EnergyConversions[A](n: A)(implicit num: Numeric[A]) {
     def J = Joules(n)
@@ -282,11 +600,57 @@ object EnergyConversions {
     def ergs = Ergs(n)
 
     def therm = Therms(n)
-    def NGcf = NGcfs(n)
-    def NGCcf = NGCcfs(n)
-    def NGKcf = NGKcfs(n)
-    def NGMcf = NGMcfs(n)
+    def NGcf = NGCfs(n)
+    def NGCcf = NGCCfs(n)
+    def NGKcf = NGKCfs(n)
+    def NGMcf = NGMCfs(n)
     def NGm3 = NGm3s(n)
+
+    def No1USG = OilNo1USGs(n)
+    def No1UKG = OilNo1UKGs(n)
+    def No1L = OilNo1Ls(n)
+
+    def No2USG = OilNo2USGs(n)
+    def No2UKG = OilNo2UKGs(n)
+    def No2L = OilNo2Ls(n)
+
+    def No4USG = OilNo4USGs(n)
+    def No4UKG = OilNo4UKGs(n)
+    def No4L = OilNo4Ls(n)
+
+    def No6USG = OilNo6USGs(n)
+    def No6UKG = OilNo6UKGs(n)
+    def No6L = OilNo6Ls(n)
+
+    def DieselUSG = DieselUSGs(n)
+    def DieselUKG = DieselUKGs(n)
+    def DieselL = DieselLs(n)
+
+    def KeroseneUSG = KeroseneUSGs(n)
+    def KeroseneUKG = KeroseneUKGs(n)
+    def KeroseneL = KeroseneLs(n)
+
+    def SteamLb = SteamLbs(n)
+    def CHWTonH = CHWTonHs(n)
+    def CoalATon = CoalATons(n)
+    def CoalATonne = CoalATonnes(n)
+    def CoalALb = CoalALbs(n)
+    def CoalAKLb = CoalAKLbs(n)
+
+    def CoalAMLb = CoalAMLbs(n)
+    def CoalBitTonne = CoalBitTonnes(n)
+    def CoalBitTon = CoalBitTons(n)
+    def CoalBitLb = CoalBitLbs(n)
+    def CoalBitKLb = CoalBitKLbs(n)
+    def CoalBitMLb = CoalBitMLbs(n)
+
+    def CokeTon = CokeTons(n)
+    def CokeLb = CokeLbs(n)
+    def CokeKLb = CokeKLbs(n)
+    def CokeMLb = CokeMLbs(n)
+
+    def WoodTon = WoodTons(n)
+    def WoodTonne = WoodTonnes(n)
 
     def wattHours = WattHours(n)
     def kilowattHours = KilowattHours(n)
