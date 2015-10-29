@@ -81,36 +81,36 @@ trait AreaUnit extends UnitOfMeasure[Area] with UnitConverter {
 }
 
 object SquareMeters extends AreaUnit with PrimaryUnit with SiUnit {
-  val symbol = "m²"
+  val symbol = "mSQ"
 }
 
 object SquareCentimeters extends AreaUnit {
-  val symbol = "cm²"
+  val symbol = "cmSQ"
   val conversionFactor = MetricSystem.Centi * MetricSystem.Centi
 }
 
 object SquareKilometers extends AreaUnit {
-  val symbol = "km²"
+  val symbol = "kmSQ"
   val conversionFactor = MetricSystem.Kilo * MetricSystem.Kilo
 }
 
 object SquareUsMiles extends AreaUnit {
-  val symbol = "mi²"
+  val symbol = "miSQ"
   val conversionFactor = 2.589988110336 * SquareKilometers.conversionFactor
 }
 
 object SquareYards extends AreaUnit {
-  val symbol = "yd²"
+  val symbol = "ydSQ"
   val conversionFactor = 8.3612736e-1
 }
 
 object SquareFeet extends AreaUnit {
-  val symbol = "ft²"
+  val symbol = "ftSQ"
   val conversionFactor = 9.290304e-2
 }
 
 object SquareInches extends AreaUnit {
-  val symbol = "in²"
+  val symbol = "inSQ"
   val conversionFactor = 6.4516 * SquareCentimeters.conversionFactor
 }
 

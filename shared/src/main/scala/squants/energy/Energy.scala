@@ -68,9 +68,16 @@ final class Energy private (val value: Double, val unit: EnergyUnit)
   def toTerajoules = to(Terajoules)
 
   def toBtus = to(BritishThermalUnits)
+  def toKBtus = to(KBtus)
   def toMBtus = to(MBtus)
   def toMMBtus = to(MMBtus)
   def toErgs = to(Ergs)
+  def toTherms = to(Therms)
+  def toNGcfs = to(NGcfs)
+  def toNGCcfs = to(NGCcfs)
+  def toNGKcfs = to(NGKcfs)
+  def toNGMcfs = to(NGMcfs)
+  def toNGm3s = to(NGm3s)
 }
 
 /**
@@ -87,7 +94,7 @@ object Energy extends Dimension[Energy] {
   def units = Set(WattHours, KilowattHours, MegawattHours, GigawattHours,
     Joules, Picojoules, Nanojoules, Microjoules, Millijoules,
     Kilojoules, Megajoules, Gigajoules, Terajoules,
-    BritishThermalUnits, MBtus, MMBtus, Ergs)
+    BritishThermalUnits, KBtus, MBtus, MMBtus, Ergs, Therms, NGcfs, NGCcfs, NGKcfs, NGMcfs, NGm3s)
 }
 
 /**
@@ -103,7 +110,7 @@ object WattHours extends EnergyUnit with PrimaryUnit {
 
 object KilowattHours extends EnergyUnit {
   val conversionFactor = Watts.conversionFactor * MetricSystem.Kilo
-  val symbol = "kWh"
+  val symbol = "KWh"
 }
 
 object MegawattHours extends EnergyUnit {
@@ -166,8 +173,14 @@ object BritishThermalUnits extends EnergyUnit {
   val symbol = "Btu"
 }
 
-object MBtus extends EnergyUnit {
+object KBtus extends EnergyUnit {
   val conversionFactor = EnergyConversions.btuMultiplier * MetricSystem.Kilo
+  val symbol = "KBtu"
+}
+
+//MBTU is equivalent to MMBTU as both refer to 1 Million BTUs. Confusing, yes, but MM means thousand thousand
+object MBtus extends EnergyUnit {
+  val conversionFactor = EnergyConversions.btuMultiplier * MetricSystem.Mega
   val symbol = "MBtu"
 }
 
@@ -181,11 +194,41 @@ object Ergs extends EnergyUnit {
   val symbol = "erg"
 }
 
+object Therms extends EnergyUnit {
+  val conversionFactor = EnergyConversions.thermMultiplier
+  val symbol = "therms"
+}
+
+object NGcfs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.NGcfMultiplier
+  val symbol = "NGcf"
+}
+
+object NGCcfs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.NGcfMultiplier * MetricSystem.Centi
+  val symbol = "NGCcf"
+}
+
+object NGKcfs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.NGcfMultiplier * MetricSystem.Kilo
+  val symbol = "NGKcf"
+}
+
+object NGMcfs extends EnergyUnit {
+  val conversionFactor = EnergyConversions.NGcfMultiplier * MetricSystem.Mega
+  val symbol = "NGMcf"
+}
+
+object NGm3s extends EnergyUnit {
+  val conversionFactor = EnergyConversions.NGm3Multiplier
+  val symbol = "NGm3"
+}
+
 object EnergyConversions {
   lazy val wattHour = WattHours(1)
   lazy val Wh = wattHour
   lazy val kilowattHour = KilowattHours(1)
-  lazy val kWh = kilowattHour
+  lazy val KWh = kilowattHour
   lazy val megawattHour = MegawattHours(1)
   lazy val MWh = megawattHour
   lazy val gigawattHour = GigawattHours(1)
@@ -203,6 +246,10 @@ object EnergyConversions {
 
   lazy val btu = BritishThermalUnits(1)
   lazy val btuMultiplier = 2.930710701722222e-1
+
+  lazy val thermMultiplier = 29300.1
+  lazy val NGcfMultiplier = 0.3006909
+  lazy val NGm3Multiplier = 10639.359
 
   implicit class EnergyConversions[A](n: A)(implicit num: Numeric[A]) {
     def J = Joules(n)
@@ -225,13 +272,22 @@ object EnergyConversions {
     def terajoules = Terajoules(n)
 
     def Wh = WattHours(n)
-    def kWh = KilowattHours(n)
+    def KWh = KilowattHours(n)
     def MWh = MegawattHours(n)
     def GWh = GigawattHours(n)
     def Btu = BritishThermalUnits(n)
+    def KBtu = KBtus(n)
     def MBtu = MBtus(n)
     def MMBtu = MMBtus(n)
     def ergs = Ergs(n)
+
+    def therm = Therms(n)
+    def NGcf = NGcfs(n)
+    def NGCcf = NGCcfs(n)
+    def NGKcf = NGKcfs(n)
+    def NGMcf = NGMcfs(n)
+    def NGm3 = NGm3s(n)
+
     def wattHours = WattHours(n)
     def kilowattHours = KilowattHours(n)
     def megawattHours = MegawattHours(n)
