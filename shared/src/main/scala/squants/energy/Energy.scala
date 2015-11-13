@@ -263,7 +263,7 @@ object NGCfs extends EnergyUnit {
 }
 
 object NGCCfs extends EnergyUnit {
-  val conversionFactor = EnergyConversions.NGCfMultiplier * MetricSystem.Centi
+  val conversionFactor = EnergyConversions.NGCfMultiplier * MetricSystem.Hecto
   val symbol = "NGCcf"
 }
 
@@ -380,7 +380,7 @@ object PropaneCfs extends EnergyUnit {
   val symbol = "PropaneCf"
 }
 object PropaneCCfs extends EnergyUnit {
-  val conversionFactor = EnergyConversions.PropaneCfMultiplier * MetricSystem.Centi
+  val conversionFactor = EnergyConversions.PropaneCfMultiplier * MetricSystem.Hecto
   val symbol = "PropaneCCf"
 }
 object PropaneKCfs extends EnergyUnit {
@@ -494,10 +494,6 @@ object WoodTonnes extends EnergyUnit {
   val symbol = "WoodTonne"
 }
 
-
-
-
-
 object EnergyConversions {
   lazy val wattHour = WattHours(1)
   lazy val Wh = wattHour
@@ -521,52 +517,52 @@ object EnergyConversions {
   lazy val btu = BritishThermalUnits(1)
   lazy val btuMultiplier = 2.930710701722222e-1
 
-  lazy val thermMultiplier = 29300.1
-  lazy val NGCfMultiplier = 0.3006909
-  lazy val NGm3Multiplier = 10639.359
+  lazy val thermMultiplier = 29308.323564
+  lazy val NGCfMultiplier = 300.703400
+  lazy val NGm3Multiplier = 10639.800703
 
-  lazy val No1USGMultiplier = 40.7368788e-3
-  lazy val No1UKGMultiplier = 48.9214745e-3
-  lazy val No1LMultiplier = 10.76157e-3
+  lazy val No1USGMultiplier = 40738.569754
+  lazy val No1UKGMultiplier = 48923.505275
+  lazy val No1LMultiplier = 10762.016413
 
-  lazy val No2USGMultiplier = 40.4438077e-3
-  lazy val No2UKGMultiplier = 48.5694962e-3
-  lazy val No2LMultiplier = 10.684199e-3
+  lazy val No2USGMultiplier = 40445.486518
+  lazy val No2UKGMultiplier = 48571.512309
+  lazy val No2LMultiplier = 10684.642438
 
-  lazy val No4USGMultiplier = 42.7883762e-3
-  lazy val No4UKGMultiplier = 51.3850299e-3
-  lazy val No4LMultiplier = 11.303458e-3
+  lazy val No4USGMultiplier = 42790.152403
+  lazy val No4UKGMultiplier = 51387.162954
+  lazy val No4LMultiplier = 11303.927315
 
-  lazy val No6USGMultiplier = 43.9606605e-3
-  lazy val No6UKGMultiplier = 52.7929434e-3
-  lazy val No6LMultiplier = 11.613234e-3
+  lazy val No6USGMultiplier = 43962.485346
+  lazy val No6UKGMultiplier = 52795.134818
+  lazy val No6LMultiplier = 11613.716295
 
-  lazy val DieselUSGMultiplier = 40.4438077e-3
-  lazy val DieselUKGMultiplier = 48.5694962e-3
-  lazy val DieselLMultiplier = 10.684199e-3
+  lazy val DieselUSGMultiplier = 40445.486518
+  lazy val DieselUKGMultiplier = 48571.512309
+  lazy val DieselLMultiplier = 10684.642438
 
-  lazy val KeroseneUSGMultiplier = 39.5645945e-3
-  lazy val KeroseneUKGMultiplier = 47.5135611e-3
-  lazy val KeroseneLMultiplier = 10.451794e-3
+  lazy val KeroseneUSGMultiplier = 39566.236811
+  lazy val KeroseneUKGMultiplier = 47515.533411
+  lazy val KeroseneLMultiplier = 10452.227433
 
-  lazy val PropaneUSGMultiplier = 26.962538e-3
-  lazy val PropaneUKGMultiplier = 32.3796641e-3
-  lazy val PropaneLMultiplier = 7.1227993e-3
-  lazy val PropaneCfMultiplier = .7373668e-3
+  lazy val PropaneUSGMultiplier = 26963.657679
+  lazy val PropaneUKGMultiplier = 32381.008206
+  lazy val PropaneLMultiplier = 737.397421
+  lazy val PropaneCfMultiplier = 737.397421
 
-  lazy val SteamLbMultiplier = .3499269e-3
-  lazy val CHWTonHMultiplier = 3.5168528e-3
-  lazy val CoalATonMultiplier = 7353.1531506-3
-  lazy val CoalATonneMultiplier = 8105.8636991e-3
-  lazy val CoalALbMultiplier = 3.6765766-3
-  lazy val CoalBitTonMultiplier = 7306.2617794e-3
-  lazy val CoalBitTonneMultiplier = 8054.1791505e-3
-  lazy val CoalBitLbMultiplier = 3.6531309e-3
-  lazy val CokeTonMultiplier = 7268.1625403e-3
-  lazy val CokeTonneMultiplier = 8012.2699874e-3
-  lazy val CokeLbMultiplier = 3.6340813e-3
-  lazy val WoodTonMultiplier = 5122.8823066e-3
-  lazy val WoodTonneMultiplier = 4647.2279597e-3
+  lazy val SteamLbMultiplier = 349.941383
+  lazy val CHWTonHMultiplier = 3516.998828
+  lazy val CoalATonMultiplier = 7353458.382181
+  lazy val CoalATonneMultiplier = 8106200.175850
+  lazy val CoalALbMultiplier = 3676.729191
+  lazy val CoalBitTonMultiplier = 7306565.064478
+  lazy val CoalBitTonneMultiplier = 8054513.481829
+  lazy val CoalBitLbMultiplier = 3653.282532
+  lazy val CokeTonMultiplier = 7268464.243845
+  lazy val CokeTonneMultiplier = 8012602.579132
+  lazy val CokeLbMultiplier = 3634.232122
+  lazy val WoodTonMultiplier = 5123094.958968
+  lazy val WoodTonneMultiplier = 4647420.867526
 
 
   implicit class EnergyConversions[A](n: A)(implicit num: Numeric[A]) {
