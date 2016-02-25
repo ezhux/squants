@@ -159,7 +159,7 @@ object CubicFeet extends VolumeUnit {
 }
 object HundredCubicFeet extends VolumeUnit {
   val symbol = "ccf"
-  val conversionFactor = BigDecimal(CubicFeet.conversionFactor) * 100
+  val conversionFactor = CubicFeet.conversionFactor * 100
 }
 
 object CubicInches extends VolumeUnit {
