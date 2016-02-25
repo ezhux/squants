@@ -71,6 +71,7 @@ final class Energy private (val value: Double, val unit: EnergyUnit)
   def toKBtus = to(KBtus)
   def toMBtus = to(MBtus)
   def toMMBtus = to(MMBtus)
+  def toTBtus = to(TBtus)
   def toErgs = to(Ergs)
   def toTherms = to(Therms)
   def toNGCfs = to(NGCfs)
@@ -108,7 +109,7 @@ final class Energy private (val value: Double, val unit: EnergyUnit)
   def toPropaneLs = to(PropaneLs)
   def toPropaneCfs = to(PropaneCfs)
   def toPropaneCCfs = to(PropaneCCfs)
-  def toPropaneLKCs = to(PropaneKCfs)
+  def toPropaneKCfs = to(PropaneKCfs)
 
   def toSteamLbs = to(SteamLbs)
 
@@ -144,7 +145,7 @@ object Energy extends Dimension[Energy] {
   def units = Set(WattHours, KilowattHours, MegawattHours, GigawattHours,
     Joules, Picojoules, Nanojoules, Microjoules, Millijoules,
     Kilojoules, Megajoules, Gigajoules, Terajoules,
-    BritishThermalUnits, KBtus, MBtus, MMBtus, Ergs, Therms, NGCfs,
+    BritishThermalUnits, KBtus, MBtus, MMBtus, TBtus, Ergs, Therms, NGCfs,
     NGCCfs, NGKCfs, NGMCfs, NGm3s, OilNo1USGs, OilNo1UKGs, OilNo1Ls,
     OilNo2USGs, OilNo2UKGs, OilNo2Ls, OilNo4USGs, OilNo4UKGs, OilNo4Ls,
     OilNo6USGs, OilNo6UKGs, OilNo6Ls, DieselUSGs, DieselUKGs, DieselLs,
@@ -245,6 +246,11 @@ object MBtus extends EnergyUnit {
 object MMBtus extends EnergyUnit {
   val conversionFactor = EnergyConversions.btuMultiplier * MetricSystem.Mega
   val symbol = "MMBtu"
+}
+
+object TBtus extends EnergyUnit {
+  val conversionFactor = EnergyConversions.btuMultiplier * MetricSystem.Tera
+  val symbol = "TBtu"
 }
 
 object Ergs extends EnergyUnit {
@@ -593,6 +599,7 @@ object EnergyConversions {
     def KBtu = KBtus(n)
     def MBtu = MBtus(n)
     def MMBtu = MMBtus(n)
+    def TBtu = TBtus(n)
     def ergs = Ergs(n)
 
     def therm = Therms(n)
@@ -626,14 +633,25 @@ object EnergyConversions {
     def KeroseneUKG = KeroseneUKGs(n)
     def KeroseneL = KeroseneLs(n)
 
+    def PropaneUSG = PropaneUSGs(n)
+    def PropaneUKG = PropaneUKGs(n)
+    def PropaneL = PropaneLs(n)
+    def PropaneCf = PropaneCfs(n)
+    def PropaneCCf = PropaneCCfs(n)
+    def PropaneKCf = PropaneKCfs(n)
+
     def SteamLb = SteamLbs(n)
+    def SteamKLb = SteamKLbs(n)
+    def SteamMLb = SteamMLbs(n)
+
     def CHWTonH = CHWTonHs(n)
+
     def CoalATon = CoalATons(n)
     def CoalATonne = CoalATonnes(n)
     def CoalALb = CoalALbs(n)
     def CoalAKLb = CoalAKLbs(n)
-
     def CoalAMLb = CoalAMLbs(n)
+
     def CoalBitTonne = CoalBitTonnes(n)
     def CoalBitTon = CoalBitTons(n)
     def CoalBitLb = CoalBitLbs(n)
@@ -641,6 +659,7 @@ object EnergyConversions {
     def CoalBitMLb = CoalBitMLbs(n)
 
     def CokeTon = CokeTons(n)
+    def CokeTonne = CokeTonnes(n)
     def CokeLb = CokeLbs(n)
     def CokeKLb = CokeKLbs(n)
     def CokeMLb = CokeMLbs(n)
