@@ -96,7 +96,7 @@ object Volume extends Dimension[Volume] {
   def siUnit = CubicMeters
   def units = Set(CubicMeters, Litres, Nanolitres, Microlitres, Millilitres, Centilitres,
     Decilitres, Hectolitres,
-    CubicUsMiles, CubicYards, CubicFeet, CubicInches,
+    CubicUsMiles, CubicYards, HundredCubicFeet, CubicFeet, CubicInches,
     UsGallons, UsQuarts, UsPints, UsCups, FluidOunces, Tablespoons, Teaspoons)
 }
 
@@ -159,7 +159,7 @@ object CubicFeet extends VolumeUnit {
 }
 object HundredCubicFeet extends VolumeUnit {
   val symbol = "ccf"
-  val conversionFactor = CubicFeet.conversionFactor * 100
+  val conversionFactor = CubicFeet.conversionFactor / 100
 }
 
 object CubicInches extends VolumeUnit {
