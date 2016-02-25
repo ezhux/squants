@@ -157,6 +157,10 @@ object CubicFeet extends VolumeUnit {
   val symbol = "ft³"
   val conversionFactor = BigDecimal(Feet.conversionFactor).pow(3).toDouble
 }
+object HundredCubicFeet extends VolumeUnit {
+  val symbol = "ccf"
+  val conversionFactor = BigDecimal(CubicFeet.conversionFactor) * 100
+}
 
 object CubicInches extends VolumeUnit {
   val symbol = "in³"
@@ -258,6 +262,7 @@ object VolumeConversions {
   lazy val cubicMile = CubicUsMiles(1)
   lazy val cubicYard = CubicYards(1)
   lazy val cubicFoot = CubicFeet(1)
+  lazy val hundredCubicFoot = HundredCubicFeet(1)
   lazy val cubicInch = CubicInches(1)
 
   lazy val gallon = UsGallons(1)
@@ -290,6 +295,7 @@ object VolumeConversions {
     def cubicMiles = CubicUsMiles(n)
     def cubicYards = CubicYards(n)
     def cubicFeet = CubicFeet(n)
+    def hundredCubicFeet = HundredCubicFeet(n)
     def cubicInches = CubicInches(n)
 
     def gallons = UsGallons(n)
