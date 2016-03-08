@@ -169,7 +169,7 @@ object WattHours extends EnergyUnit with PrimaryUnit {
 
 object KilowattHours extends EnergyUnit {
   val conversionFactor = Watts.conversionFactor * MetricSystem.Kilo
-  val symbol = "KWh"
+  val symbol = "kWh"
 }
 
 object MegawattHours extends EnergyUnit {
@@ -504,7 +504,7 @@ object EnergyConversions {
   lazy val wattHour = WattHours(1)
   lazy val Wh = wattHour
   lazy val kilowattHour = KilowattHours(1)
-  lazy val KWh = kilowattHour
+  lazy val kWh = kilowattHour
   lazy val megawattHour = MegawattHours(1)
   lazy val MWh = megawattHour
   lazy val gigawattHour = GigawattHours(1)
@@ -592,7 +592,7 @@ object EnergyConversions {
     def terajoules = Terajoules(n)
 
     def Wh = WattHours(n)
-    def KWh = KilowattHours(n)
+    def kWh = KilowattHours(n)
     def MWh = MegawattHours(n)
     def GWh = GigawattHours(n)
     def Btu = BritishThermalUnits(n)
