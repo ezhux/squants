@@ -48,7 +48,9 @@ trait Dimension[A <: Quantity[A]] {
    * @param symbol String
    * @return
    */
-  def symbolToUnit(symbol: String): Option[UnitOfMeasure[A]] = units.find(u ⇒ u.symbol == symbol)
+  def symbolToUnit(symbol: String): Option[UnitOfMeasure[A]] = units.find { u =>
+    u.symbol == symbol
+  }
 
   /**
    * Tries to map a string or tuple value to Quantity of this Dimension

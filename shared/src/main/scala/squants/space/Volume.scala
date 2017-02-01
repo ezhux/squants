@@ -70,6 +70,8 @@ final class Volume private (val value: Double, val unit: VolumeUnit)
   def toCubicInches = to(CubicInches)
 
   def toUsGallons = to(UsGallons)
+  def toKiloUsGallons = to(KiloUsGallons)
+
   def toUsQuarts = to(UsQuarts)
   def toUsPints = to(UsPints)
   def toUsCups = to(UsCups)
@@ -97,7 +99,7 @@ object Volume extends Dimension[Volume] {
   def units = Set(CubicMeters, Litres, Nanolitres, Microlitres, Millilitres, Centilitres,
     Decilitres, Hectolitres,
     CubicUsMiles, CubicYards, HundredCubicFeet, CubicFeet, CubicInches,
-    UsGallons, UsQuarts, UsPints, UsCups, FluidOunces, Tablespoons, Teaspoons)
+    KiloUsGallons, UsGallons, UsQuarts, UsPints, UsCups, FluidOunces, Tablespoons, Teaspoons)
 }
 
 trait VolumeUnit extends UnitOfMeasure[Volume] with UnitConverter {
@@ -170,6 +172,11 @@ object CubicInches extends VolumeUnit {
 object UsGallons extends VolumeUnit {
   val symbol = "gal"
   val conversionFactor = Millilitres.conversionFactor * 3.785411784e3
+}
+
+object KiloUsGallons extends VolumeUnit {
+  val symbol = "kgal"
+  val conversionFactor = Millilitres.conversionFactor * 3.785411784e3 * MetricSystem.Kilo
 }
 
 object UsQuarts extends VolumeUnit {
@@ -266,6 +273,8 @@ object VolumeConversions {
   lazy val cubicInch = CubicInches(1)
 
   lazy val gallon = UsGallons(1)
+  lazy val kilogallon = KiloUsGallons(1)
+
   lazy val quart = UsQuarts(1)
   lazy val pint = UsPints(1)
   lazy val cup = UsCups(1)
@@ -299,6 +308,8 @@ object VolumeConversions {
     def cubicInches = CubicInches(n)
 
     def gallons = UsGallons(n)
+    def kilogallons = KiloUsGallons(n)
+
     def quarts = UsQuarts(n)
     def pints = UsPints(n)
     def cups = UsCups(n)
