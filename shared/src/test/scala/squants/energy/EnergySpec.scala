@@ -8,14 +8,14 @@
 
 package squants.energy
 
-import org.scalatest.{ FlatSpec, Matchers }
-import squants.electro.{ Coulombs, Volts }
+import org.scalatest.{FlatSpec, Matchers}
+import squants.electro.{Coulombs, Volts}
 import squants.mass.Kilograms
-import squants.motion.{ MetersPerSecond, NewtonSeconds, Newtons }
-import squants.space.{ CubicMeters, Meters }
-import squants.thermal.{ JoulesPerKelvin, Kelvin }
+import squants.motion.{MetersPerSecond, NewtonSeconds, Newtons}
+import squants.space.{CubicMeters, Meters}
+import squants.thermal.{JoulesPerKelvin, Kelvin}
 import squants.time.Hours
-import squants.{ MetricSystem, QuantityParseException }
+import squants.{MetricSystem, QuantityParseException}
 
 import scala.language.postfixOps
 
@@ -106,7 +106,7 @@ class EnergySpec extends FlatSpec with Matchers {
     BritishThermalUnits(1).toString(BritishThermalUnits) should be("1.0 Btu")
     MBtus(1).toString(MBtus) should be("1.0 MBtu")
     MMBtus(1).toString(MMBtus) should be("1.0 MMBtu")
-    Ergs(1).toString(Ergs) should be ("1.0 erg")
+    Ergs(1).toString(Ergs) should be("1.0 erg")
   }
 
   it should "return Power when divided by Time" in {

@@ -8,8 +8,8 @@
 
 package squants
 
-import org.scalatest.{ FlatSpec, Matchers }
-import squants.space.{ Degrees, Kilometers, SquareKilometers, SquareMeters }
+import org.scalatest.{FlatSpec, Matchers}
+import squants.space.{Degrees, Kilometers, SquareKilometers, SquareMeters}
 
 /**
  * @author  garyKeorkunian
@@ -327,7 +327,8 @@ class SVectorSpec extends FlatSpec with Matchers {
     val expRes = SVector(
       Kilometers(y.to(Kilometers) * a - z.to(Kilometers) * a),
       Kilometers(z.to(Kilometers) * a - x.to(Kilometers) * a),
-      Kilometers(x.to(Kilometers) * a - y.to(Kilometers) * a))
+      Kilometers(x.to(Kilometers) * a - y.to(Kilometers) * a)
+    )
     SVector(x, y, z).crossProduct(SVector(a, a, a)) should be(expRes)
     SVector(x, y, z) #* SVector(a, a, a) should be(expRes)
 
@@ -347,7 +348,8 @@ class SVectorSpec extends FlatSpec with Matchers {
     val expRes = SVector(
       y * a - z * a,
       z * a - x * a,
-      x * a - y * a)
+      x * a - y * a
+    )
     SVector(x, y, z).crossProduct[Length, Area](SVector(a, a, a), _ * _) should be(expRes)
 
     val up = SVector(Kilometers(1), Kilometers(2), Kilometers(3))

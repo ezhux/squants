@@ -8,9 +8,9 @@
 
 package squants.electro
 
-import org.scalatest.{ Matchers, FlatSpec }
-import squants.{ QuantityParseException, MetricSystem }
-import squants.time.{ Seconds, Time }
+import org.scalatest.{Matchers, FlatSpec}
+import squants.{QuantityParseException, MetricSystem}
+import squants.time.{Seconds, Time}
 import squants.energy.Joules
 
 /**

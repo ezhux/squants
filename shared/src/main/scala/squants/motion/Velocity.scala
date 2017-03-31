@@ -8,9 +8,9 @@
 
 package squants.motion
 
-import squants.{ Time, _ }
-import squants.space.{ Feet, InternationalMiles, Kilometers, NauticalMiles, UsMiles }
-import squants.time.{ Seconds, _ }
+import squants.{Time, _}
+import squants.space.{Feet, InternationalMiles, Kilometers, NauticalMiles, UsMiles}
+import squants.time.{Seconds, _}
 
 /**
  * Represents a quantify of Velocity

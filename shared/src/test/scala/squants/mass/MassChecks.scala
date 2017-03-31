@@ -11,7 +11,7 @@ package squants.mass
 import org.scalacheck.Prop._
 import org.scalacheck.Properties
 import squants.QuantityChecks
-import squants.space.{ CubicMeters, SquareMeters }
+import squants.space.{CubicMeters, SquareMeters}
 
 /**
  * @author  garyKeorkunian

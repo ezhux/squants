@@ -8,8 +8,8 @@
 
 package squants.electro
 
-import org.scalatest.{ Matchers, FlatSpec }
-import squants.{ QuantityParseException, MetricSystem }
+import org.scalatest.{Matchers, FlatSpec}
+import squants.{QuantityParseException, MetricSystem}
 import squants.time.Seconds
 import squants.energy.Watts
 

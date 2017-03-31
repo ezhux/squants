@@ -19,7 +19,7 @@ package squants
  */
 package object experimental {
 
-//  type QuantitySeries[A <: Quantity[A, _]] = IndexedSeq[QuantityRange[A, _]]
+  //  type QuantitySeries[A <: Quantity[A, _]] = IndexedSeq[QuantityRange[A, _]]
 
   /**
    * Helper function to achieve uniform Double formatting over JVM and JS platforms.

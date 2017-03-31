@@ -9,7 +9,7 @@
 package squants.motion
 
 import squants._
-import squants.time.{ Seconds, TimeDerivative }
+import squants.time.{Seconds, TimeDerivative}
 
 /**
  * @author  stevebarham

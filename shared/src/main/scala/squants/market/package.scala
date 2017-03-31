@@ -60,9 +60,10 @@ package object market {
     CHF, CLP, CNY, CZK, DKK,
     EUR, GBP, HKD, INR, JPY,
     KRW, MXN, MYR, NOK, NZD,
-    RUB, SEK, XAG, XAU, BTC)
+    RUB, SEK, XAG, XAU, BTC
+  )
 
-  lazy val defaultCurrencyMap: Map[String, Currency] = defaultCurrencySet.map { c: Currency ⇒ c.code -> c }.toMap
+  lazy val defaultCurrencyMap: Map[String, Currency] = defaultCurrencySet.map { c: Currency ⇒ c.code → c }.toMap
 
   lazy val defaultMoneyContext = MoneyContext(USD, defaultCurrencySet, Nil)
 

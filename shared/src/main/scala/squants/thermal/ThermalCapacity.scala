@@ -9,7 +9,7 @@
 package squants.thermal
 
 import squants._
-import squants.energy.{ Energy, Joules }
+import squants.energy.{Energy, Joules}
 
 /**
  * Represents the capacity of some substance or system to hold thermal energy.

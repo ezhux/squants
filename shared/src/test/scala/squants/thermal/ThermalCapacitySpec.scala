@@ -8,7 +8,7 @@
 
 package squants.thermal
 
-import org.scalatest.{ Matchers, FlatSpec }
+import org.scalatest.{Matchers, FlatSpec}
 import scala.language.postfixOps
 import squants.energy.Joules
 import squants.QuantityParseException

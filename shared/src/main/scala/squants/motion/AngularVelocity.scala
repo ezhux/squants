@@ -9,7 +9,7 @@
 package squants.motion
 
 import squants._
-import squants.space.{ Degrees, Gradians, Turns }
+import squants.space.{Degrees, Gradians, Turns}
 
 /**
  * @author  garyKeorkunian

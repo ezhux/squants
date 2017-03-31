@@ -8,11 +8,11 @@
 
 package squants.mass
 
-import squants.energy.{ Energy, Joules, SpecificEnergy }
-import squants.motion.{ Force, MassFlow, Momentum, _ }
-import squants.space.{ CubicMeters, SquareMeters }
+import squants.energy.{Energy, Joules, SpecificEnergy}
+import squants.motion.{Force, MassFlow, Momentum, _}
+import squants.space.{CubicMeters, SquareMeters}
 import squants.time.TimeIntegral
-import squants.{ Acceleration, Energy ⇒ _, Velocity, _ }
+import squants.{Acceleration, Energy ⇒ _, Velocity, _}
 
 /**
  * Represents a quantity of Mass

@@ -15,7 +15,7 @@ import squants.time._
 import org.json4s.native.Serialization._
 import squants.market._
 import squants.market.Price
-import squants.mass.{ Mass, Pounds }
+import squants.mass.{Mass, Pounds}
 
 class QuantitySerializerSpec extends FlatSpec with MustMatchers {
 

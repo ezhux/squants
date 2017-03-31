@@ -5,16 +5,15 @@ import squants.mass.Mass
 import squants.space.{SquareMeters, SquareFeet}
 
 /**
-  * Created by clayteeter on 2/1/17.
-  */
+ * Created by clayteeter on 2/1/17.
+ */
 
 final class Emissions private (val value: Double, val unit: EmissionsUnit)
-  extends Quantity[Emissions] {
+    extends Quantity[Emissions] {
 
   def dimension = Emissions
 
 }
-
 
 object Emissions extends Dimension[Emissions] {
   private[emissions] def apply[A](n: A, unit: EmissionsUnit)(implicit num: Numeric[A]) = new Emissions(num.toDouble(n), unit)
@@ -58,6 +57,4 @@ object EmissionsConversions {
     def toMegagramsCO2e = MegagramCO2e(n)
   }
 }
-
-
 

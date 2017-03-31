@@ -8,7 +8,7 @@
 
 package squants
 
-import org.scalatest.matchers.{ MatchResult, Matcher }
+import org.scalatest.matchers.{MatchResult, Matcher}
 
 trait CustomMatchers {
 
@@ -18,7 +18,8 @@ trait CustomMatchers {
       MatchResult(
         r.contains(left),
         s"$left was not within $range",
-        s"$left was within $range")
+        s"$left was within $range"
+      )
     }
   }
 
@@ -31,7 +32,8 @@ trait CustomMatchers {
       MatchResult(
         left approx expectedValue,
         s"$left was not approximately equal to $expectedValue ($tolerance)",
-        s"$left was approximately equal to $expectedValue ($tolerance)")
+        s"$left was approximately equal to $expectedValue ($tolerance)"
+      )
     }
   }
 
@@ -44,7 +46,8 @@ trait CustomMatchers {
       MatchResult(
         (expectedValue - tolerance) <= left & left <= (expectedValue + tolerance),
         s"$left was not approximately equal to $expectedValue ($tolerance)",
-        s"$left was approximately equal to $expectedValue ($tolerance)")
+        s"$left was approximately equal to $expectedValue ($tolerance)"
+      )
     }
   }
 

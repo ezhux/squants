@@ -10,7 +10,7 @@ package squants.electro
 
 import squants._
 import squants.energy.Watts
-import squants.time.{ Seconds, TimeDerivative }
+import squants.time.{Seconds, TimeDerivative}
 
 /**
  * Represents a quantity of electric current

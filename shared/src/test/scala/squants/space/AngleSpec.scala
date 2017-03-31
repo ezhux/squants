@@ -8,7 +8,7 @@
 
 package squants.space
 
-import org.scalatest.{ FlatSpec, Matchers }
+import org.scalatest.{FlatSpec, Matchers}
 import squants.QuantityParseException
 
 /**

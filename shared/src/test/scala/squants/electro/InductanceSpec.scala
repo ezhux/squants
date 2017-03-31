@@ -8,7 +8,7 @@
 
 package squants.electro
 
-import org.scalatest.{ Matchers, FlatSpec }
+import org.scalatest.{Matchers, FlatSpec}
 import squants.QuantityParseException
 
 /**

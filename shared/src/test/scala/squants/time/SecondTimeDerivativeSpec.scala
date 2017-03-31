@@ -8,7 +8,7 @@
 
 package squants.time
 
-import org.scalatest.{ FlatSpec, Matchers }
+import org.scalatest.{FlatSpec, Matchers}
 import squants.CustomMatchers
 import squants.motion.MetersPerSecondSquared
 import squants.space.Meters

@@ -8,10 +8,10 @@
 
 package squants.radio
 
-import org.scalatest.{ FlatSpec, Matchers }
+import org.scalatest.{FlatSpec, Matchers}
 import squants.QuantityParseException
 import squants.energy.Watts
-import squants.space.{ Meters, SquareMeters, SquaredRadians }
+import squants.space.{Meters, SquareMeters, SquaredRadians}
 
 import scala.language.postfixOps
 

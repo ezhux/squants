@@ -8,10 +8,10 @@
 
 package squants.space
 
-import org.scalatest.{ FlatSpec, Matchers }
+import org.scalatest.{FlatSpec, Matchers}
 import squants.QuantityParseException
-import squants.energy.{ Joules, JoulesPerCubicMeter }
-import squants.mass.{ Kilograms, KilogramsPerCubicMeter }
+import squants.energy.{Joules, JoulesPerCubicMeter}
+import squants.mass.{Kilograms, KilogramsPerCubicMeter}
 import squants.motion.CubicMetersPerSecond
 import squants.time.Seconds
 

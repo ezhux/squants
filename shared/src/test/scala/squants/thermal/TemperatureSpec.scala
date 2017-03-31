@@ -8,7 +8,7 @@
 
 package squants.thermal
 
-import org.scalatest.{ Matchers, FlatSpec }
+import org.scalatest.{Matchers, FlatSpec}
 import squants.energy.Joules
 import squants.mass.Kilograms
 import squants.QuantityParseException

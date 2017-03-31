@@ -8,7 +8,7 @@
 
 package squants.market
 
-import org.scalatest.{ Matchers, FlatSpec }
+import org.scalatest.{Matchers, FlatSpec}
 
 /**
  * @author  garyKeorkunian
@@ -28,7 +28,8 @@ class MoneyContextSpec extends FlatSpec with Matchers {
     CurrencyExchangeRate(AUD(1), USD(0.8961)),
     CurrencyExchangeRate(XAU(1), USD(1200.00)),
     CurrencyExchangeRate(XAG(1), USD(20.00)),
-    CurrencyExchangeRate(CHF(1), NOK(40)))
+    CurrencyExchangeRate(CHF(1), NOK(40))
+  )
 
   val moneyContext = MoneyContext(defCur, defaultCurrencySet, rates)
 
@@ -133,7 +134,8 @@ class MoneyContextSpec extends FlatSpec with Matchers {
       CurrencyExchangeRate(EUR(1), USD(1.25)),
       CurrencyExchangeRate(USD(1), JPY(100)),
       CurrencyExchangeRate(GBP(1), USD(1.6686)),
-      CurrencyExchangeRate(USD(1), CAD(1.1126)))
+      CurrencyExchangeRate(USD(1), CAD(1.1126))
+    )
     val newContext = moneyContext.withExchangeRates(newRates)
     newContext.defaultCurrency should be(moneyContext.defaultCurrency)
     newContext.currencies should be(moneyContext.currencies)

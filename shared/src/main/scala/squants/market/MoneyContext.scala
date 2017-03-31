@@ -31,7 +31,8 @@ case class MoneyContext(
     defaultCurrency: Currency,
     currencies: Set[Currency],
     rates: Seq[CurrencyExchangeRate],
-    allowIndirectConversions: Boolean = true) {
+    allowIndirectConversions: Boolean = true
+) {
 
   /**
    * Returns an Option on an exchange rate if a direct rate exists, otherwise None

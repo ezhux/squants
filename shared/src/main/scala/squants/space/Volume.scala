@@ -9,9 +9,9 @@
 package squants.space
 
 import squants._
-import squants.energy.{ EnergyDensity, Joules }
-import squants.mass.{ ChemicalAmount, Kilograms }
-import squants.motion.{ CubicMetersPerSecond, VolumeFlow }
+import squants.energy.{EnergyDensity, Joules}
+import squants.mass.{ChemicalAmount, Kilograms}
+import squants.motion.{CubicMetersPerSecond, VolumeFlow}
 import squants.time.TimeIntegral
 
 /**

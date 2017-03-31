@@ -9,8 +9,8 @@
 package squants.electro
 
 import squants._
-import squants.energy.{ Joules, Watts }
-import squants.time.{ Seconds, TimeDerivative }
+import squants.energy.{Joules, Watts}
+import squants.time.{Seconds, TimeDerivative}
 
 /**
  * @author  garyKeorkunian

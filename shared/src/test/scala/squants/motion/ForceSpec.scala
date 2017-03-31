@@ -8,13 +8,13 @@
 
 package squants.motion
 
-import org.scalatest.{ Matchers, FlatSpec }
+import org.scalatest.{Matchers, FlatSpec}
 import scala.language.postfixOps
 import squants.mass.Kilograms
 import squants.time.Seconds
 import squants.energy.Joules
-import squants.space.{ SquareMeters, Meters }
-import squants.{ QuantityParseException, CustomMatchers }
+import squants.space.{SquareMeters, Meters}
+import squants.{QuantityParseException, CustomMatchers}
 
 /**
  * @author  garyKeorkunian

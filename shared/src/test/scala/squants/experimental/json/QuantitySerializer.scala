@@ -8,8 +8,8 @@
 
 package squants.experimental.json
 
-import squants.{ Dimension, UnitOfMeasure, Quantity }
-import org.json4s.{ Formats, Serializer }
+import squants.{Dimension, UnitOfMeasure, Quantity}
+import org.json4s.{Formats, Serializer}
 import org.json4s.JsonAST._
 import squants.energy._
 import squants.time._
@@ -30,7 +30,7 @@ abstract class QuantitySerializer[A <: Quantity[A]] //(unitOfMeasure: UnitOfMeas
   protected def dimension: Dimension[A]
   protected def symbolToUnit: String ⇒ Option[UnitOfMeasure[A]] = dimension.units.map {
     u ⇒
-      u.symbol -> u
+      u.symbol → u
   }.toMap.get
 
   val c = Clazz
@@ -56,8 +56,10 @@ abstract class QuantitySerializer[A <: Quantity[A]] //(unitOfMeasure: UnitOfMeas
   def serializeQuantity(q: Quantity[A]) =
     JObject(
       List(
-        "value" -> JDecimal(q.value),
-        "unit" -> JString(q.unit.symbol)))
+        "value" → JDecimal(q.value),
+        "unit" → JString(q.unit.symbol)
+      )
+    )
 }
 
 /*

@@ -8,11 +8,11 @@
 
 package squants.space
 
-import org.scalatest.{ FlatSpec, Matchers }
-import squants.mass.{ Kilograms, KilogramsPerSquareMeter }
-import squants.motion.{ Newtons, Pascals }
-import squants.photo.{ Candelas, CandelasPerSquareMeter, Lumens, Lux }
-import squants.{ MetricSystem, QuantityParseException }
+import org.scalatest.{FlatSpec, Matchers}
+import squants.mass.{Kilograms, KilogramsPerSquareMeter}
+import squants.motion.{Newtons, Pascals}
+import squants.photo.{Candelas, CandelasPerSquareMeter, Lumens, Lux}
+import squants.{MetricSystem, QuantityParseException}
 
 /**
  * @author  garyKeorkunian
@@ -67,8 +67,8 @@ class AreaSpec extends FlatSpec with Matchers {
   }
 
   it should "return properly formatted strings for all supported Units of Measure" in {
-    SquareMeters(1).toString(SquareMeters) should be("1.0 m²")
-    SquareCentimeters(1).toString(SquareCentimeters) should be("1.0 cm²")
+    SquareMeters(1).toString(SquareMeters) should be("1.0 mSQ")
+    SquareCentimeters(1).toString(SquareCentimeters) should be("1.0 cmSQ")
     SquareKilometers(1).toString(SquareKilometers) should be("1.0 km²")
     SquareUsMiles(1).toString(SquareUsMiles) should be("1.0 mi²")
     SquareYards(1).toString(SquareYards) should be("1.0 yd²")

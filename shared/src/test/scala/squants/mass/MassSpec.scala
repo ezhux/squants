@@ -8,11 +8,11 @@
 
 package squants.mass
 
-import org.scalatest.{ FlatSpec, Matchers }
+import org.scalatest.{FlatSpec, Matchers}
 import squants.motion._
-import squants.space.{ CubicMeters, SquareMeters }
+import squants.space.{CubicMeters, SquareMeters}
 import squants.time.Seconds
-import squants.{ MetricSystem, QuantityParseException }
+import squants.{MetricSystem, QuantityParseException}
 
 import scala.language.postfixOps
 

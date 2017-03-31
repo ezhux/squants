@@ -8,12 +8,12 @@
 
 package squants.space
 
-import org.scalatest.{ FlatSpec, Matchers }
-import squants.electro.{ OhmMeters, Ohms, Siemens, SiemensPerMeter }
+import org.scalatest.{FlatSpec, Matchers}
+import squants.electro.{OhmMeters, Ohms, Siemens, SiemensPerMeter}
 import squants.energy.Joules
-import squants.motion.{ MetersPerSecond, Newtons }
+import squants.motion.{MetersPerSecond, Newtons}
 import squants.time.Seconds
-import squants.{ MetricSystem, QuantityParseException }
+import squants.{MetricSystem, QuantityParseException}
 
 /**
  * @author  garyKeorkunian
@@ -27,7 +27,7 @@ class LengthSpec extends FlatSpec with Matchers {
   it should "create values using UOM factories" in {
 
     Meters(1).toMeters should be(1)
-    Angstroms(1).toAngstroms should be (1)
+    Angstroms(1).toAngstroms should be(1)
     Nanometers(1).toNanometers should be(1)
     Microns(1).toMicrons should be(1)
     Millimeters(1).toMillimeters should be(1)
@@ -73,7 +73,7 @@ class LengthSpec extends FlatSpec with Matchers {
   it should "properly convert to all supported Units of Measure" in {
     val x = Meters(1)
     x.toMeters should be(1)
-    x.toAngstroms should be(1 / (100*MetricSystem.Pico))
+    x.toAngstroms should be(1 / (100 * MetricSystem.Pico))
     x.toNanometers should be(1 / MetricSystem.Nano)
     x.toMicrons should be(1 / MetricSystem.Micro)
     x.toMillimeters should be(1 / MetricSystem.Milli)
@@ -96,7 +96,7 @@ class LengthSpec extends FlatSpec with Matchers {
 
   it should "return properly formatted strings for all supported Units of Measure" in {
     Meters(1).toString(Meters) should be("1.0 m")
-    Angstroms(1).toString(Angstroms) should be ("1.0 Å")
+    Angstroms(1).toString(Angstroms) should be("1.0 Å")
     Nanometers(1).toString(Nanometers) should be("1.0 nm")
     Microns(1).toString(Microns) should be("1.0 µm")
     Millimeters(1).toString(Millimeters) should be("1.0 mm")

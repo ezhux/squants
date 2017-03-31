@@ -9,12 +9,12 @@
 package squants.energy
 
 import squants._
-import squants.electro.{ Coulombs, ElectricCharge, ElectricPotential, Volts }
-import squants.mass.{ ChemicalAmount, Kilograms }
+import squants.electro.{Coulombs, ElectricCharge, ElectricPotential, Volts}
+import squants.mass.{ChemicalAmount, Kilograms}
 import squants.motion.Newtons
 import squants.space.CubicMeters
-import squants.thermal.{ JoulesPerKelvin, Kelvin, ThermalCapacity }
-import squants.time.{ Time, _ }
+import squants.thermal.{JoulesPerKelvin, Kelvin, ThermalCapacity}
+import squants.time.{Time, _}
 
 /**
  * Represents a quantity of energy
@@ -149,9 +149,9 @@ object Energy extends Dimension[Energy] {
     NGCCfs, NGKCfs, NGMCfs, NGm3s, OilNo1USGs, OilNo1UKGs, OilNo1Ls,
     OilNo2USGs, OilNo2UKGs, OilNo2Ls, OilNo4USGs, OilNo4UKGs, OilNo4Ls,
     OilNo6USGs, OilNo6UKGs, OilNo6Ls, DieselUSGs, DieselUKGs, DieselLs,
-    PropaneUSGs, PropaneUKGs, PropaneLs,PropaneCfs, PropaneCCfs, PropaneKCfs,
+    PropaneUSGs, PropaneUKGs, PropaneLs, PropaneCfs, PropaneCCfs, PropaneKCfs,
     KeroseneUSGs, KeroseneUKGs, KeroseneLs, SteamLbs, SteamKLbs, SteamMLbs,
-    CHWTonHs, CoalATons,CoalATonnes, CoalALbs, CoalAKLbs, CoalAMLbs,
+    CHWTonHs, CoalATons, CoalATonnes, CoalALbs, CoalAKLbs, CoalAMLbs,
     CoalBitTons, CoalBitTonnes, CoalBitLbs, CoalBitKLbs, CoalBitMLbs,
     CokeTons, CokeLbs, CokeKLbs, CokeMLbs, CokeTonnes, WoodTons, WoodTonnes)
 }
@@ -353,7 +353,6 @@ object DieselLs extends EnergyUnit {
   val symbol = "DieselL"
 }
 
-
 object KeroseneUSGs extends EnergyUnit {
   val conversionFactor = EnergyConversions.KeroseneUSGMultiplier
   val symbol = "KeroseneUSG"
@@ -366,7 +365,6 @@ object KeroseneLs extends EnergyUnit {
   val conversionFactor = EnergyConversions.KeroseneLMultiplier
   val symbol = "KeroseneL"
 }
-
 
 object PropaneUSGs extends EnergyUnit {
   val conversionFactor = EnergyConversions.PropaneUSGMultiplier
@@ -438,7 +436,6 @@ object CoalATonnes extends EnergyUnit {
   val conversionFactor = EnergyConversions.CoalATonneMultiplier
   val symbol = "CoalATonne"
 }
-
 
 object CoalBitTons extends EnergyUnit {
   val conversionFactor = EnergyConversions.CoalBitTonMultiplier
@@ -569,7 +566,6 @@ object EnergyConversions {
   lazy val CokeLbMultiplier = 3634.232122
   lazy val WoodTonMultiplier = 5123094.958968
   lazy val WoodTonneMultiplier = 4647420.867526
-
 
   implicit class EnergyConversions[A](n: A)(implicit num: Numeric[A]) {
     def J = Joules(n)

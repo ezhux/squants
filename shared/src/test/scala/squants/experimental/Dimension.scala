@@ -8,7 +8,7 @@
 
 package squants.experimental
 
-import scala.util.{ Failure, Success, Try }
+import scala.util.{Failure, Success, Try}
 
 /**
  * Represents a Dimension or Quantity Type
@@ -56,12 +56,12 @@ trait Dimension[A <: Quantity[A, _]] {
    * @return Try[A]
    */
   protected def parse(value: Any) = value match {
-    case s: String              ⇒ parseString(s)
+    case s: String                  ⇒ parseString(s)
     case (v: BigDecimal, u: String) ⇒ parseTuple(v, u)
-    case (v: Double, u: String) ⇒ parseTuple(v, u)
-    case (v: Float, u: String) ⇒ parseTuple(v, u)
-    case (v: Long, u: String) ⇒ parseTuple(v, u)
-    case (v: Int, u: String) ⇒ parseTuple(v, u)
+    case (v: Double, u: String)     ⇒ parseTuple(v, u)
+    case (v: Float, u: String)      ⇒ parseTuple(v, u)
+    case (v: Long, u: String)       ⇒ parseTuple(v, u)
+    case (v: Int, u: String)        ⇒ parseTuple(v, u)
   }
 
   private def parseString(s: String): Try[Quantity[A, BigDecimal]] = {
@@ -72,7 +72,7 @@ trait Dimension[A <: Quantity[A, _]] {
   }
   private lazy val QuantityString = ("^([-+]?[0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?) *(" + units.map { u: UnitOfMeasure[A] ⇒ u.symbol }.reduceLeft(_ + "|" + _) + ")$").r
 
-  private def parseTuple[N : SquantsNumeric](value: N, symbol: String): Try[Quantity[A, N]] = {
+  private def parseTuple[N: SquantsNumeric](value: N, symbol: String): Try[Quantity[A, N]] = {
     symbolToUnit(symbol) match {
       case Some(unit) ⇒ Success(unit(value))
       case None       ⇒ Failure(QuantityParseException(s"Unable to identify $name unit $symbol", (value, symbol).toString()))

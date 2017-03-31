@@ -9,10 +9,10 @@
 package squants.energy
 
 import squants._
-import squants.electro.{ Amperes, ElectricCurrent, ElectricPotential, Volts }
-import squants.radio.{ Irradiance, RadiantIntensity, SpectralPower, _ }
-import squants.space.{ SolidAngle, SquareMeters, SquaredRadians }
-import squants.time.{ Hours, TimeDerivative, TimeIntegral }
+import squants.electro.{Amperes, ElectricCurrent, ElectricPotential, Volts}
+import squants.radio.{Irradiance, RadiantIntensity, SpectralPower, _}
+import squants.space.{SolidAngle, SquareMeters, SquaredRadians}
+import squants.time.{Hours, TimeDerivative, TimeIntegral}
 
 /**
  * Represents a quantity of power / load, the rate at which energy produced or used

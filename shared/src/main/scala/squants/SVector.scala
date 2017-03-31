@@ -183,9 +183,11 @@ case class DoubleVector(coordinates: Double*) extends SVector[Double] {
 
   def crossProduct(that: SVectorType) = (this.coordinates.length, that.coordinates.length) match {
     case (3, 3) ⇒
-      DoubleVector(coordinates(1) * that.coordinates(2) - coordinates(2) * that.coordinates(1),
+      DoubleVector(
+        coordinates(1) * that.coordinates(2) - coordinates(2) * that.coordinates(1),
         coordinates(2) * that.coordinates(0) - coordinates(0) * that.coordinates(2),
-        coordinates(0) * that.coordinates(1) - coordinates(1) * that.coordinates(0))
+        coordinates(0) * that.coordinates(1) - coordinates(1) * that.coordinates(0)
+      )
     case (7, 7) ⇒ throw new UnsupportedOperationException("Seven-dimensional cross product is not currently supported")
     case _      ⇒ throw new UnsupportedOperationException("Cross product is not supported on vectors with an arbitrary number of dimensions")
   }
@@ -262,7 +264,8 @@ case class QuantityVector[A <: Quantity[A]](coordinates: A*) extends SVector[A] 
       QuantityVector(
         (coordinates(1) * that.coordinates(2)) - (coordinates(2) * that.coordinates(1)),
         (coordinates(2) * that.coordinates(0)) - (coordinates(0) * that.coordinates(2)),
-        (coordinates(0) * that.coordinates(1)) - (coordinates(1) * that.coordinates(0)))
+        (coordinates(0) * that.coordinates(1)) - (coordinates(1) * that.coordinates(0))
+      )
     case (7, 7) ⇒ throw new UnsupportedOperationException("Seven-dimensional Cross Product is not currently supported")
     case _      ⇒ throw new UnsupportedOperationException("Cross Product is not supported on vectors with an arbitrary number of dimensions")
   }
@@ -273,7 +276,8 @@ case class QuantityVector[A <: Quantity[A]](coordinates: A*) extends SVector[A] 
         QuantityVector(
           quantTimes(coordinates(1), that.coordinates(2)) - quantTimes(coordinates(2), that.coordinates(1)),
           quantTimes(coordinates(2), that.coordinates(0)) - quantTimes(coordinates(0), that.coordinates(2)),
-          quantTimes(coordinates(0), that.coordinates(1)) - quantTimes(coordinates(1), that.coordinates(0)))
+          quantTimes(coordinates(0), that.coordinates(1)) - quantTimes(coordinates(1), that.coordinates(0))
+        )
       case (7, 7) ⇒ throw new UnsupportedOperationException("Seven-dimensional Cross Product is not currently supported")
       case _      ⇒ throw new UnsupportedOperationException("Cross Product is not supported on vectors with an arbitrary number of dimensions")
     }

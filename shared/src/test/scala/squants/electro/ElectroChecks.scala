@@ -9,9 +9,9 @@
 package squants.electro
 
 import squants.mass.Kilograms
-import squants.energy.{ Grays, Joules, Watts }
+import squants.energy.{Grays, Joules, Watts}
 import squants.motion.Newtons
-import squants.space.{ SquareMeters, Meters }
+import squants.space.{SquareMeters, Meters}
 import squants.time.Seconds
 import org.scalacheck.Properties
 import org.scalacheck.Prop._

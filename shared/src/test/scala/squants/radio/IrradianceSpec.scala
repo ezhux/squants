@@ -8,7 +8,7 @@
 
 package squants.radio
 
-import org.scalatest.{ FlatSpec, Matchers }
+import org.scalatest.{FlatSpec, Matchers}
 import squants.QuantityParseException
 import squants.energy.Watts
 import squants.space.SquareMeters
@@ -40,7 +40,7 @@ class IrradianceSpec extends FlatSpec with Matchers {
   }
 
   it should "return properly formatted strings for all supported Units of Measure" in {
-    WattsPerSquareMeter(1).toString should be("1.0 W/m²")
+    WattsPerSquareMeter(1).toString should be("1.0 W/mSQ")
   }
 
   it should "return Power when multiplied by Area" in {

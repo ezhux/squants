@@ -9,7 +9,7 @@
 package squants.motion
 
 import scala.language.postfixOps
-import org.scalatest.{ Matchers, FlatSpec }
+import org.scalatest.{Matchers, FlatSpec}
 import squants.mass.Kilograms
 import squants.time.Seconds
 import squants.QuantityParseException

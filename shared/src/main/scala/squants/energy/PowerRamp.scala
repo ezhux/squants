@@ -8,7 +8,7 @@
 
 package squants.energy
 
-import squants.{ Time, _ }
+import squants.{Time, _}
 import squants.time._
 
 /**

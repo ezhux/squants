@@ -8,7 +8,7 @@
 
 package squants.mass
 
-import org.scalatest.{ FlatSpec, Matchers }
+import org.scalatest.{FlatSpec, Matchers}
 import squants.QuantityParseException
 import squants.space.SquareMeters
 

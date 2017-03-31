@@ -8,7 +8,7 @@
 
 package squants.market
 
-import org.scalatest.{ FlatSpec, Matchers }
+import org.scalatest.{FlatSpec, Matchers}
 
 /**
  * @author  garyKeorkunian

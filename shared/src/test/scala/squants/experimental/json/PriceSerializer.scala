@@ -9,7 +9,7 @@
 package squants.experimental.json
 
 import squants.Quantity
-import org.json4s.{ Formats, Serializer }
+import org.json4s.{Formats, Serializer}
 import squants.market.Money
 import org.json4s.JsonAST._
 import squants.energy._
@@ -79,9 +79,11 @@ trait PriceSerializerT[A <: Quantity[A]] extends Serializer[Price[A]] {
   def serializePrice[B <: Quantity[B]](price: Price[B]) = {
     JObject(
       List(
-        "amount" -> JDecimal(price.money.value),
-        "currency" -> JString(price.money.unit.code),
-        "per" -> JString(price.quantity.toString)))
+        "amount" → JDecimal(price.money.value),
+        "currency" → JString(price.money.unit.code),
+        "per" → JString(price.quantity.toString)
+      )
+    )
   }
 
   /**

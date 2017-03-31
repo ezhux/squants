@@ -12,7 +12,7 @@ import org.scalacheck.Prop._
 import org.scalacheck.Properties
 import squants.QuantityChecks
 import squants.energy.Watts
-import squants.space.{ Meters, SquareMeters, SquaredRadians }
+import squants.space.{Meters, SquareMeters, SquaredRadians}
 
 /**
  * @author  garyKeorkunian

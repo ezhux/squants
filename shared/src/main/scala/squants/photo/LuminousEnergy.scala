@@ -8,7 +8,7 @@
 package squants.photo
 
 import squants._
-import squants.time.{ Seconds, TimeIntegral }
+import squants.time.{Seconds, TimeIntegral}
 
 /**
  * @author  garyKeorkunian

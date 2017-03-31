@@ -8,9 +8,9 @@
 
 package squants.market
 
-import org.scalatest.{ Matchers, FlatSpec }
+import org.scalatest.{Matchers, FlatSpec}
 import scala.language.postfixOps
-import squants.space.{ Yards, Meters }
+import squants.space.{Yards, Meters}
 
 /**
  * @author  garyKeorkunian

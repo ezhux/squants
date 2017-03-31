@@ -8,7 +8,7 @@
 
 package squants.motion
 
-import squants.space.{ SquareMeters, CubicMeters, Meters }
+import squants.space.{SquareMeters, CubicMeters, Meters}
 import squants.time.Seconds
 import squants.mass.Kilograms
 import org.scalacheck.Properties

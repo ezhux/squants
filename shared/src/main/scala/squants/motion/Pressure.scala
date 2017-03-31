@@ -9,7 +9,7 @@
 package squants.motion
 
 import squants._
-import squants.space.{ SquareInches, SquareMeters }
+import squants.space.{SquareInches, SquareMeters}
 import squants.time.TimeIntegral
 
 /**

@@ -8,11 +8,11 @@
 
 package squants.motion
 
-import org.scalatest.{ Matchers, FlatSpec }
+import org.scalatest.{Matchers, FlatSpec}
 import scala.language.postfixOps
 import squants.space.CubicMeters
 import squants.time.Seconds
-import squants.{ QuantityParseException, CustomMatchers }
+import squants.{QuantityParseException, CustomMatchers}
 
 /**
  * @author  garyKeorkunian

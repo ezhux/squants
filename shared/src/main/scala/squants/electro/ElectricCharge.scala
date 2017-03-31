@@ -10,7 +10,7 @@ package squants.electro
 
 import squants._
 import squants.energy.Joules
-import squants.time.{ Time, TimeIntegral }
+import squants.time.{Time, TimeIntegral}
 
 /**
  * @author  garyKeorkunian

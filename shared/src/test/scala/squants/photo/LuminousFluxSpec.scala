@@ -8,9 +8,9 @@
 
 package squants.photo
 
-import org.scalatest.{ FlatSpec, Matchers }
+import org.scalatest.{FlatSpec, Matchers}
 import squants.QuantityParseException
-import squants.space.{ SquareMeters, SquaredRadians }
+import squants.space.{SquareMeters, SquaredRadians}
 import squants.time.Seconds
 
 import scala.language.postfixOps

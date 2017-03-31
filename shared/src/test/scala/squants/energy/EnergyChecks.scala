@@ -11,11 +11,11 @@ package squants.energy
 import org.scalacheck.Prop.forAll
 import org.scalacheck.Properties
 import squants.QuantityChecks
-import squants.electro.{ Amperes, Coulombs, Volts }
+import squants.electro.{Amperes, Coulombs, Volts}
 import squants.mass.Kilograms
 import squants.motion.Newtons
-import squants.space.{ CubicMeters, Meters }
-import squants.thermal.{ JoulesPerKelvin, Kelvin }
+import squants.space.{CubicMeters, Meters}
+import squants.thermal.{JoulesPerKelvin, Kelvin}
 import squants.time.Hours
 
 /**

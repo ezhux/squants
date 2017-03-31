@@ -4,10 +4,10 @@ import squants._
 import squants.space.{SquareMeters, SquareFeet}
 
 /**
-  * Created by clayteeter on 2/1/17.
-  */
+ * Created by clayteeter on 2/1/17.
+ */
 final class EmissionsIntensity private (val value: Double, val unit: EmissionsIntensityUnit)
-  extends Quantity[EmissionsIntensity] {
+    extends Quantity[EmissionsIntensity] {
 
   def dimension = EmissionsIntensity
 

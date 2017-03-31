@@ -8,7 +8,7 @@
 
 package squants
 
-import scala.util.{ Failure, Success, Try }
+import scala.util.{Failure, Success, Try}
 
 /**
  * Represents a Dimension or Quantity Type
@@ -48,7 +48,7 @@ trait Dimension[A <: Quantity[A]] {
    * @param symbol String
    * @return
    */
-  def symbolToUnit(symbol: String): Option[UnitOfMeasure[A]] = units.find { u =>
+  def symbolToUnit(symbol: String): Option[UnitOfMeasure[A]] = units.find { u ⇒
     u.symbol == symbol
   }
 

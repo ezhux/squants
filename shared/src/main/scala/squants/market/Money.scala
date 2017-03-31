@@ -9,7 +9,7 @@
 package squants.market
 
 import squants._
-import scala.util.{ Failure, Success, Try }
+import scala.util.{Failure, Success, Try}
 
 import scala.language.implicitConversions
 
@@ -302,7 +302,7 @@ final class Money private (val amount: BigDecimal)(val currency: Currency)
   /**
    * toThe
    */
-  def -> = toThe _
+  def → = toThe _
 
   /**
    * Convert this Money to a Double representing the currency unit

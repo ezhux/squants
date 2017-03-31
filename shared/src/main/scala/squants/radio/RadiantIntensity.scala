@@ -10,7 +10,7 @@ package squants.radio
 
 import squants._
 import squants.energy.Watts
-import squants.space.{ SquareMeters, SquaredRadians }
+import squants.space.{SquareMeters, SquaredRadians}
 
 /**
  * @author  garyKeorkunian

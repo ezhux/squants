@@ -8,7 +8,6 @@
 
 package squants.experimental
 
-
 /**
  * Represents a quantity of some thing for which there is no dimension.
  *
@@ -20,7 +19,7 @@ package squants.experimental
  *
  * @param value Double the amount
  */
-final class Dimensionless[N : SquantsNumeric] private (val value: N, val unit: DimensionlessUnit)
+final class Dimensionless[N: SquantsNumeric] private (val value: N, val unit: DimensionlessUnit)
     extends Quantity[Dimensionless[_], N] {
 
   import sqNum.mkSquantsNumericOps
@@ -41,7 +40,7 @@ final class Dimensionless[N : SquantsNumeric] private (val value: N, val unit: D
  * Factory singleton for [[squants.Dimensionless]]
  */
 object Dimensionless extends Dimension[Dimensionless[_]] {
-  def apply[N : SquantsNumeric](n: N, unit: DimensionlessUnit) = new Dimensionless(n, unit)
+  def apply[N: SquantsNumeric](n: N, unit: DimensionlessUnit) = new Dimensionless(n, unit)
   def apply = parse _
   def name = "Dimensionless"
   def primaryUnit = Each
@@ -121,15 +120,15 @@ object DimensionlessConversions {
     def million = Each(sqNum.times(n, sqNum.fromDouble(1e6)))
   }
 
-//  implicit object DimensionlessNumeric extends AbstractQuantityNumeric[Dimensionless](Dimensionless.primaryUnit) {
-//    /**
-//     * Dimensionless quantities support the times operation.
-//     * This method overrides the default [[squants.AbstractQuantityNumeric.times]] which thrown an exception
-//     *
-//     * @param x Dimensionless
-//     * @param y Dimensionless
-//     * @return
-//     */
-//    override def times(x: Dimensionless, y: Dimensionless) = x * y
-//  }
+  //  implicit object DimensionlessNumeric extends AbstractQuantityNumeric[Dimensionless](Dimensionless.primaryUnit) {
+  //    /**
+  //     * Dimensionless quantities support the times operation.
+  //     * This method overrides the default [[squants.AbstractQuantityNumeric.times]] which thrown an exception
+  //     *
+  //     * @param x Dimensionless
+  //     * @param y Dimensionless
+  //     * @return
+  //     */
+  //    override def times(x: Dimensionless, y: Dimensionless) = x * y
+  //  }
 }

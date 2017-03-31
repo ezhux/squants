@@ -5,13 +5,13 @@ import squants.radio.WattsPerSquareMeter
 import squants.space.{SquareFeet, AreaConversions, SquareMeters}
 
 /**
-  *
-  */
+ *
+ */
 
 //TODO: This would be great as a macro
 
 final class EnergyIntensity private (val value: Double, val unit: EnergyIntensityUnit)
-  extends Quantity[EnergyIntensity] {
+    extends Quantity[EnergyIntensity] {
 
   def dimension = EnergyIntensity
 
@@ -85,12 +85,12 @@ object WattHoursPerSquareFeet extends EnergyIntensityUnit {
 
 object KilowattHoursPerSquareFeet extends EnergyIntensityUnit {
   val conversionFactor = MetricSystem.Kilo * SquareFeet.conversionFactor
-  val symbol =  KilowattHours.symbol + "/" + SquareFeet.symbol
+  val symbol = KilowattHours.symbol + "/" + SquareFeet.symbol
 }
 
 object MegawattHoursPerSquareFeet extends EnergyIntensityUnit {
   val conversionFactor = MetricSystem.Mega * SquareFeet.conversionFactor
-  val symbol =  MegawattHours.symbol + "/" + SquareFeet.symbol
+  val symbol = MegawattHours.symbol + "/" + SquareFeet.symbol
 }
 
 // Watts Meter
@@ -101,12 +101,12 @@ object WattHoursPerSquareMeter extends EnergyIntensityUnit with PrimaryUnit {
 
 object KilowattHoursPerSquareMeter extends EnergyIntensityUnit {
   val conversionFactor = MetricSystem.Kilo
-  val symbol =  KilowattHours.symbol + "/" + SquareMeters.symbol
+  val symbol = KilowattHours.symbol + "/" + SquareMeters.symbol
 }
 
 object MegawattHoursPerSquareMeter extends EnergyIntensityUnit {
   val conversionFactor = MetricSystem.Mega
-  val symbol =  MegawattHours.symbol + "/" + SquareMeters.symbol
+  val symbol = MegawattHours.symbol + "/" + SquareMeters.symbol
 }
 
 // Joules Feet
@@ -194,7 +194,6 @@ object MegathermsPerSquareFeet extends EnergyIntensityUnit {
   val conversionFactor = MetricSystem.Mega * EnergyConversions.thermMultiplier * SquareFeet.conversionFactor
 }
 
-
 // Therms Meter
 object ThermsPerSquareMeter extends EnergyIntensityUnit {
   val symbol = BritishThermalUnits.symbol + "/" + SquareFeet.symbol
@@ -211,8 +210,6 @@ object MegathermsPerSquareMeter extends EnergyIntensityUnit {
   val conversionFactor = MetricSystem.Mega * EnergyConversions.thermMultiplier
 }
 
-
-
 object EnergyIntensityConversions {
   lazy val wattHourPerSquareMeter = WattHoursPerSquareMeter(1)
   lazy val kilowattHourPerSquareMeter = KilowattHoursPerSquareMeter(1)
@@ -222,8 +219,6 @@ object EnergyIntensityConversions {
   lazy val kilowattHourPerSquareFeet = KilowattHoursPerSquareFeet(1)
   lazy val megawattHourPerSquareMeet = MegawattHoursPerSquareFeet(1)
 
-
-
   lazy val joulePerSquareMeter = JoulesPerSquareMeter(1)
   lazy val kilojoulePerSquareMeter = KilojoulesPerSquareMeter(1)
   lazy val megajoulePerSquarecMeter = MegajoulesPerSquareMeter(1)
@@ -231,7 +226,6 @@ object EnergyIntensityConversions {
   lazy val joulePerSquareFeet = JoulesPerSquareFeet(1)
   lazy val kilojoulePerSquareFeet = KilojoulesPerSquareFeet(1)
   lazy val megajoulePerSquareFeet = MegajoulesPerSquareFeet(1)
-
 
   lazy val btuPerSquareMeter = BtusPerSquareMeter(1)
   lazy val kilobtuPerSquareMeter = KilobtusPerSquareMeter(1)
@@ -258,7 +252,6 @@ object EnergyIntensityConversions {
     def kilowattsHoursPerSquareFeet = KilowattHoursPerSquareFeet(n)
     def megawattsHoursPerSquareFeet = MegawattHoursPerSquareFeet(n)
 
-
     def joulesPerSquareMeter = JoulesPerSquareMeter(n)
     def kilojoulesPerSquareMeter = KilojoulesPerSquareMeter(n)
     def megajoulesPerSquareMeter = MegajoulesPerSquareMeter(n)
@@ -267,8 +260,6 @@ object EnergyIntensityConversions {
     def kilojoulesPerSquareFeet = KilojoulesPerSquareFeet(n)
     def megajoulesPerSquareFeet = MegajoulesPerSquareFeet(n)
 
-
-
     def btusPerSquareMeter = BtusPerSquareMeter(n)
     def kilobtusPerSquareMeter = KilobtusPerSquareMeter(n)
     def megabtusPerSquareMeter = MegabtusPerSquareMeter(n)
@@ -276,8 +267,6 @@ object EnergyIntensityConversions {
     def btusPerSquareFeet = BtusPerSquareFeet(n)
     def kilobtusPerSquareFeet = KilobtusPerSquareFeet(n)
     def megabtusPerSquareFeet = MegabtusPerSquareFeet(n)
-
-
 
     def thermsPerSquareFeet = ThermsPerSquareFeet(n)
     def kilothermsPerSquareFeet = KilothermsPerSquareFeet(n)

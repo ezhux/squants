@@ -9,8 +9,8 @@
 package squants.motion
 
 import squants._
-import squants.space.{ Feet, UsMiles }
-import squants.time.{ Seconds, _ }
+import squants.space.{Feet, UsMiles}
+import squants.time.{Seconds, _}
 
 /**
  * Represents a quantity of acceleration

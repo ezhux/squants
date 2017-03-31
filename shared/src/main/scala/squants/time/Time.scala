@@ -10,7 +10,7 @@ package squants.time
 
 import squants._
 
-import scala.concurrent.duration.{ DAYS, Duration, HOURS, MICROSECONDS, MILLISECONDS, MINUTES, NANOSECONDS, SECONDS }
+import scala.concurrent.duration.{DAYS, Duration, HOURS, MICROSECONDS, MILLISECONDS, MINUTES, NANOSECONDS, SECONDS}
 import scala.language.implicitConversions
 
 /**
